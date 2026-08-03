@@ -1,0 +1,61 @@
+biomarker,dataset_folder,disease,stage,count,missing_count,missing_pct,min,max,mean,median,std
+lesion_density,foot,Foot and Mouth,early,0,0,,,,,,
+lesion_density,foot,Foot and Mouth,moderate,1,0,0.0,0.5336,0.5336,0.5336,0.5336,
+lesion_density,foot,Foot and Mouth,severe,0,0,,,,,,
+lesion_density,lumpy,Lumpy,early,17,0,0.0,0.0,0.9622,0.2259,0.007,0.3225
+lesion_density,lumpy,Lumpy,moderate,6,0,0.0,0.0,0.0027,0.0005,0.0,0.0011
+lesion_density,lumpy,Lumpy,severe,7,0,0.0,0.0,0.8559,0.1612,0.0049,0.3204
+lesion_density,mastitis,Mastitis,early,15,0,0.0,0.0,0.7841,0.1415,0.0031,0.2868
+lesion_density,mastitis,Mastitis,moderate,7,0,0.0,0.0,0.858,0.2335,0.0049,0.3749
+lesion_density,mastitis,Mastitis,severe,8,0,0.0,0.0,0.5128,0.0661,0.0,0.1806
+lesion_density,mouth,Foot and Mouth,early,8,0,0.0,0.0,0.24,0.0488,0.0089,0.0824
+lesion_density,mouth,Foot and Mouth,moderate,12,0,0.0,0.0,0.5821,0.0544,0.0005,0.1666
+lesion_density,mouth,Foot and Mouth,severe,9,0,0.0,0.0,0.8311,0.159,0.003,0.3144
+texture_roughness,foot,Foot and Mouth,early,0,0,,,,,,
+texture_roughness,foot,Foot and Mouth,moderate,1,0,0.0,0.3677,0.3677,0.3677,0.3677,
+texture_roughness,foot,Foot and Mouth,severe,0,0,,,,,,
+texture_roughness,lumpy,Lumpy,early,17,0,0.0,0.3568,0.5729,0.5083,0.5222,0.0525
+texture_roughness,lumpy,Lumpy,moderate,6,0,0.0,0.4894,0.5814,0.5368,0.5375,0.0306
+texture_roughness,lumpy,Lumpy,severe,7,0,0.0,0.3924,0.572,0.4854,0.481,0.0558
+texture_roughness,mastitis,Mastitis,early,15,0,0.0,0.299,0.5191,0.4132,0.4096,0.0669
+texture_roughness,mastitis,Mastitis,moderate,7,0,0.0,0.2774,0.4941,0.3891,0.3971,0.0785
+texture_roughness,mastitis,Mastitis,severe,8,0,0.0,0.3209,0.4898,0.4014,0.4065,0.0625
+texture_roughness,mouth,Foot and Mouth,early,8,0,0.0,0.3686,0.536,0.4687,0.5134,0.0761
+texture_roughness,mouth,Foot and Mouth,moderate,12,0,0.0,0.327,0.5476,0.4635,0.4942,0.0677
+texture_roughness,mouth,Foot and Mouth,severe,9,0,0.0,0.3209,0.5138,0.4521,0.4703,0.0579
+color_variation,foot,Foot and Mouth,early,0,0,,,,,,
+color_variation,foot,Foot and Mouth,moderate,1,0,0.0,0.5115,0.5115,0.5115,0.5115,
+color_variation,foot,Foot and Mouth,severe,0,0,,,,,,
+color_variation,lumpy,Lumpy,early,17,0,0.0,0.568,0.9674,0.7498,0.7838,0.1213
+color_variation,lumpy,Lumpy,moderate,6,0,0.0,0.5933,0.9457,0.8197,0.8472,0.1321
+color_variation,lumpy,Lumpy,severe,7,0,0.0,0.6576,1.0,0.8291,0.8739,0.1437
+color_variation,mastitis,Mastitis,early,15,0,0.0,0.555,1.0,0.7782,0.7582,0.1348
+color_variation,mastitis,Mastitis,moderate,7,0,0.0,0.3855,0.9086,0.7735,0.8395,0.178
+color_variation,mastitis,Mastitis,severe,8,0,0.0,0.4023,0.8632,0.6325,0.6009,0.1573
+color_variation,mouth,Foot and Mouth,early,8,0,0.0,0.7701,1.0,0.8849,0.8789,0.0863
+color_variation,mouth,Foot and Mouth,moderate,12,0,0.0,0.6545,0.9032,0.8036,0.8229,0.0785
+color_variation,mouth,Foot and Mouth,severe,9,0,0.0,0.5361,1.0,0.8014,0.7603,0.1546
+lesion_clustering,foot,Foot and Mouth,early,0,0,,,,,,
+lesion_clustering,foot,Foot and Mouth,moderate,1,0,0.0,0.1791,0.1791,0.1791,0.1791,
+lesion_clustering,foot,Foot and Mouth,severe,0,0,,,,,,
+lesion_clustering,lumpy,Lumpy,early,12,5,29.41,0.0,0.8424,0.4954,0.5413,0.2798
+lesion_clustering,lumpy,Lumpy,moderate,1,5,83.33,0.7143,0.7143,0.7143,0.7143,
+lesion_clustering,lumpy,Lumpy,severe,4,3,42.86,0.2592,0.5689,0.4003,0.3866,0.1279
+lesion_clustering,mastitis,Mastitis,early,10,5,33.33,0.2074,0.7321,0.4177,0.4123,0.1725
+lesion_clustering,mastitis,Mastitis,moderate,3,4,57.14,0.2052,0.4091,0.3253,0.3617,0.1067
+lesion_clustering,mastitis,Mastitis,severe,2,6,75.0,0.2675,0.5525,0.41,0.41,0.2015
+lesion_clustering,mouth,Foot and Mouth,early,5,3,37.5,0.1159,0.6099,0.3567,0.2985,0.1933
+lesion_clustering,mouth,Foot and Mouth,moderate,4,8,66.67,0.2834,0.651,0.4799,0.4926,0.164
+lesion_clustering,mouth,Foot and Mouth,severe,5,4,44.44,0.2794,0.5027,0.4045,0.4112,0.0909
+boundary_irregularity,foot,Foot and Mouth,early,0,0,,,,,,
+boundary_irregularity,foot,Foot and Mouth,moderate,1,0,0.0,0.9531,0.9531,0.9531,0.9531,
+boundary_irregularity,foot,Foot and Mouth,severe,0,0,,,,,,
+boundary_irregularity,lumpy,Lumpy,early,15,2,11.76,0.4118,0.919,0.6816,0.6655,0.136
+boundary_irregularity,lumpy,Lumpy,moderate,1,5,83.33,0.7089,0.7089,0.7089,0.7089,
+boundary_irregularity,lumpy,Lumpy,severe,5,2,28.57,0.3539,0.8624,0.6002,0.5825,0.2404
+boundary_irregularity,mastitis,Mastitis,early,11,4,26.67,0.323,0.8613,0.6392,0.6186,0.1764
+boundary_irregularity,mastitis,Mastitis,moderate,4,3,42.86,0.5718,0.8286,0.7204,0.7406,0.1131
+boundary_irregularity,mastitis,Mastitis,severe,3,5,62.5,0.242,0.576,0.3764,0.3112,0.1763
+boundary_irregularity,mouth,Foot and Mouth,early,5,3,37.5,0.4468,0.7648,0.6612,0.6965,0.1244
+boundary_irregularity,mouth,Foot and Mouth,moderate,6,6,50.0,0.416,0.8697,0.7,0.7625,0.1904
+boundary_irregularity,mouth,Foot and Mouth,severe,7,2,22.22,0.4968,0.9428,0.6674,0.6136,0.1499

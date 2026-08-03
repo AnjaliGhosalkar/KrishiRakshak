@@ -1,0 +1,6 @@
+,lesion_density,texture_roughness,color_variation,lesion_clustering,boundary_irregularity
+lesion_density,1.0,0.0118,-0.1365,-0.2185,0.2297
+texture_roughness,0.0118,1.0,0.0551,-0.0133,-0.0755
+color_variation,-0.1365,0.0551,1.0,0.1088,-0.3749
+lesion_clustering,-0.2185,-0.0133,0.1088,1.0,-0.0183
+boundary_irregularity,0.2297,-0.0755,-0.3749,-0.0183,1.0

@@ -1,0 +1,16 @@
+dataset_folder,mapped_disease,biomarker,test_name,comparison,statistic,p_value
+lumpy,Lumpy,lesion_density,Kruskal-Wallis,Across stages (early/moderate/severe),8.9222,0.011549743764904167
+lumpy,Lumpy,texture_roughness,Kruskal-Wallis,Across stages (early/moderate/severe),4.3366,0.11436954827586966
+lumpy,Lumpy,color_variation,Kruskal-Wallis,Across stages (early/moderate/severe),2.9026,0.234264780499429
+lumpy,Lumpy,lesion_clustering,Kruskal-Wallis,Across stages (early/moderate/severe),1.4757,0.4781492719445657
+lumpy,Lumpy,boundary_irregularity,Kruskal-Wallis,Across stages (early/moderate/severe),0.9738,0.6145307853763468
+mastitis,Mastitis,lesion_density,Kruskal-Wallis,Across stages (early/moderate/severe),2.2008,0.33274367004798777
+mastitis,Mastitis,texture_roughness,Kruskal-Wallis,Across stages (early/moderate/severe),0.5184,0.7716647147225019
+mastitis,Mastitis,color_variation,Kruskal-Wallis,Across stages (early/moderate/severe),3.5814,0.1668398412304074
+mastitis,Mastitis,lesion_clustering,Kruskal-Wallis,Across stages (early/moderate/severe),1.0235,0.5994473284175654
+mastitis,Mastitis,boundary_irregularity,Kruskal-Wallis,Across stages (early/moderate/severe),4.783,0.09149327610055974
+mouth,Foot and Mouth,lesion_density,Kruskal-Wallis,Across stages (early/moderate/severe),1.099,0.5772336807357121
+mouth,Foot and Mouth,texture_roughness,Kruskal-Wallis,Across stages (early/moderate/severe),1.655,0.43714496051982477
+mouth,Foot and Mouth,color_variation,Kruskal-Wallis,Across stages (early/moderate/severe),3.4189,0.18096731730625845
+mouth,Foot and Mouth,lesion_clustering,Kruskal-Wallis,Across stages (early/moderate/severe),1.4229,0.490942350046392
+mouth,Foot and Mouth,boundary_irregularity,Kruskal-Wallis,Across stages (early/moderate/severe),0.3278,0.8488186035625067

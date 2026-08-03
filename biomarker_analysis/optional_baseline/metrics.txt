@@ -1,0 +1,31 @@
+Optional Baseline Classification Experiment
+===========================================
+
+Input features: 5 visual biomarkers
+Target: mapped disease label
+Model: Logistic Regression (median imputation + standardization)
+Random seed: 42
+Train size: 96
+Test size: 24
+Rows with all biomarkers present: 61 / 120
+
+Accuracy: 0.4583
+Macro F1: 0.4631
+
+Classification Report:
+                precision    recall  f1-score   support
+
+Foot and Mouth       0.50      0.33      0.40         6
+       Healthy       0.33      0.33      0.33         6
+         Lumpy       0.25      0.33      0.29         6
+      Mastitis       0.83      0.83      0.83         6
+
+      accuracy                           0.46        24
+     macro avg       0.48      0.46      0.46        24
+  weighted avg       0.48      0.46      0.46        24
+
+Limitations:
+- This is NOT the production MobileNet + Random Forest classifier.
+- Missing biomarkers were median-imputed, which may bias results.
+- Class imbalance and folder mapping (foot/mouth) may affect metrics.
+- Statistical performance here does not imply clinical usefulness.

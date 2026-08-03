@@ -1,0 +1,26 @@
+biomarker,test_name,comparison,statistic,p_value,interpretation,effect_size_name,effect_size_value
+lesion_density,Kruskal-Wallis,Across all diseases,0.8564,0.8359338849158656,Tests whether biomarker distributions differ across disease groups (non-parametric).,,
+lesion_density,One-way ANOVA,Across all diseases,1.2564,0.29271606739417716,Parametric test for mean differences; interpret cautiously if distributions are skewed.,,
+lesion_density,Mann-Whitney U,Healthy vs Lumpy,448.5,0.987902615502591,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,0.2359
+lesion_density,Mann-Whitney U,Healthy vs Mastitis,486.0,0.5858177973901455,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,0.3135
+lesion_density,Mann-Whitney U,Healthy vs Foot and Mouth,493.5,0.5111342683451707,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,0.4933
+texture_roughness,Kruskal-Wallis,Across all diseases,36.268,6.572303564968563e-08,Tests whether biomarker distributions differ across disease groups (non-parametric).,,
+texture_roughness,One-way ANOVA,Across all diseases,16.5908,4.908083234530755e-09,Parametric test for mean differences; interpret cautiously if distributions are skewed.,,
+texture_roughness,Mann-Whitney U,Healthy vs Lumpy,383.0,0.32551314367863293,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,-0.2763
+texture_roughness,Mann-Whitney U,Healthy vs Mastitis,750.0,9.511225488485183e-06,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,1.3653
+texture_roughness,Mann-Whitney U,Healthy vs Foot and Mouth,593.0,0.03513659994217983,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,0.5371
+color_variation,Kruskal-Wallis,Across all diseases,3.8164,0.28198296868907163,Tests whether biomarker distributions differ across disease groups (non-parametric).,,
+color_variation,One-way ANOVA,Across all diseases,1.6622,0.1790177826468578,Parametric test for mean differences; interpret cautiously if distributions are skewed.,,
+color_variation,Mann-Whitney U,Healthy vs Lumpy,427.0,0.7393953303568631,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,-0.1181
+color_variation,Mann-Whitney U,Healthy vs Mastitis,485.0,0.610002587644733,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,0.2013
+color_variation,Mann-Whitney U,Healthy vs Foot and Mouth,351.5,0.14735599226846202,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,-0.3822
+lesion_clustering,Kruskal-Wallis,Across all diseases,1.8208,0.6104172417542537,Tests whether biomarker distributions differ across disease groups (non-parametric).,,
+lesion_clustering,One-way ANOVA,Across all diseases,1.0093,0.3953910353591069,Parametric test for mean differences; interpret cautiously if distributions are skewed.,,
+lesion_clustering,Mann-Whitney U,Healthy vs Lumpy,93.0,0.31139253690546664,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,-0.4632
+lesion_clustering,Mann-Whitney U,Healthy vs Mastitis,111.0,0.810276575049907,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,-0.0639
+lesion_clustering,Mann-Whitney U,Healthy vs Foot and Mouth,105.5,1.0,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,-0.0346
+boundary_irregularity,Kruskal-Wallis,Across all diseases,2.8302,0.41855975549808566,Tests whether biomarker distributions differ across disease groups (non-parametric).,,
+boundary_irregularity,One-way ANOVA,Across all diseases,0.8901,0.4506552034801683,Parametric test for mean differences; interpret cautiously if distributions are skewed.,,
+boundary_irregularity,Mann-Whitney U,Healthy vs Lumpy,203.0,0.2901794415602056,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,0.2235
+boundary_irregularity,Mann-Whitney U,Healthy vs Mastitis,186.0,0.1521451275013039,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,0.4581
+boundary_irregularity,Mann-Whitney U,Healthy vs Foot and Mouth,173.0,0.4972501245865969,"Cohen's d measures standardized mean difference; |d|≈0.2 small, 0.5 medium, 0.8 large.",Cohen's d,0.0696

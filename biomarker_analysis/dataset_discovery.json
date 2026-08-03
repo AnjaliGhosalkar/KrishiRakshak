@@ -1,0 +1,1501 @@
+{
+  "dataset_root": "D:\\cow_skin_detection\\dataset",
+  "dataset_used_by_project": "D:\\cow_skin_detection\\dataset",
+  "categories": {
+    "healthy": {
+      "exists": true,
+      "dataset_folder": "healthy",
+      "mapped_disease": "Healthy",
+      "image_count": 2948,
+      "stage_subdirectories": [],
+      "images_by_stage": {
+        "none": 2948
+      }
+    },
+    "lumpy": {
+      "exists": true,
+      "dataset_folder": "lumpy",
+      "mapped_disease": "Lumpy",
+      "image_count": 3724,
+      "stage_subdirectories": [
+        "early",
+        "moderate",
+        "severe"
+      ],
+      "images_by_stage": {
+        "early": 1855,
+        "moderate": 1230,
+        "severe": 639
+      }
+    },
+    "mastitis": {
+      "exists": true,
+      "dataset_folder": "mastitis",
+      "mapped_disease": "Mastitis",
+      "image_count": 474,
+      "stage_subdirectories": [
+        "early",
+        "moderate",
+        "severe"
+      ],
+      "images_by_stage": {
+        "early": 250,
+        "moderate": 112,
+        "severe": 112
+      }
+    },
+    "foot": {
+      "exists": true,
+      "dataset_folder": "foot",
+      "mapped_disease": "Foot and Mouth",
+      "image_count": 86,
+      "stage_subdirectories": [
+        "early",
+        "moderate",
+        "severe"
+      ],
+      "images_by_stage": {
+        "early": 39,
+        "moderate": 32,
+        "severe": 15
+      }
+    },
+    "mouth": {
+      "exists": true,
+      "dataset_folder": "mouth",
+      "mapped_disease": "Foot and Mouth",
+      "image_count": 1467,
+      "stage_subdirectories": [
+        "early",
+        "moderate",
+        "severe"
+      ],
+      "images_by_stage": {
+        "early": 394,
+        "moderate": 771,
+        "severe": 302
+      }
+    }
+  },
+  "formats": {
+    ".jpg": 8619,
+    ".jpeg": 73,
+    ".png": 6,
+    ".webp": 1
+  },
+  "invalid_images": [],
+  "dimensions_sampled": [
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\123qe-58-_jpg.rf.a8ba32a1cd59ab806034cfef5a2d5082.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\123qe-82-_jpg.rf.c8d3bc199c59dc9b2a6f77ede30ac3b3.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\2346-128-_jpg.rf.2b458f808811a8c2edc380ed6bb3c717 - Copy.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\2346-128-_jpg.rf.2b458f808811a8c2edc380ed6bb3c717.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\2346-58-_jpg.rf.6d026120b14637e74e79cad115a04865 - Copy.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\2346-58-_jpg.rf.6d026120b14637e74e79cad115a04865.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\5-day-vesicle-steer-foot_jpg.rf.9f6a5b070e044c782556866eac3d3bbe.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\8556484617_a275fe6de6_bWM-1.jpg",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_144-Copy_jpeg.rf.8731ac1b8203c1084e09c96c25724cce.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_152_jpeg.rf.d80182ccd7da06ca6203f45d04629c57.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_155_jpeg.rf.09c767669dfde6e4d89320485ad147a4.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_183_jpeg.rf.8716e58777da89cb517b31e275868c1a.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_192_jpeg.rf.4871a640e847028768f94b1222f50303.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_20-Copy_jpeg.rf.33f54ba9b0d0424fecd82748640d728a.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_201_jpeg.rf.ac980f8d6fde51b9ec61e07277b6336b.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_204_jpeg.rf.53149a77f660ee57b801821985b56070.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_206_jpeg.rf.08a0dc2124ac0916d2fbb5bf5b50ba64.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_24-Copy_jpeg.rf.c7c41b90b34789945d5660418a885473.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_25-Copy_jpeg.rf.67c459d4fed6da714e97423457b3287c.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_41-Copy_jpeg.rf.58042bb1462d3f09371ebf6ec19eca08.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_43-Copy_jpeg.rf.bf5277a8092f2021137c0fc93b88fa9b.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_48-Copy_jpeg.rf.8120ad7a99c9b3aa9c597f73cef43d01.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_53-Copy_jpeg.rf.a2ab4ce5cb80267879355caa72979699.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_54-Copy_jpeg.rf.99ae59840ac60a16331a3077ed782973.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_64-Copy_jpeg.rf.117a77252cd52b1bb5b67f6465d5aa4f.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_8-Copy_jpeg.rf.0aea6ce7508c368c9d27d0d2a5a2eea6.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-foot-lesions-11-Copy-10-_jpg.rf.2a4e9bab39ab3df41ec9c0856e1026be.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-foot-lesions-11-Copy-10-_jpg.rf.53c98d15eeda2988465d5951cf71a8ed.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\babi3_png.rf.f277b8464819ea7d9b4d45e4b43d7d3b.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\pigf 10d-1WM-1.jpg",
+      "width": 4000,
+      "height": 3000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\pigf 10d-2WM-1.jpg",
+      "width": 4000,
+      "height": 3000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\pigf 10d-3WM-1.jpg",
+      "width": 4000,
+      "height": 3000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\pigf 10d-4WM-1.jpg",
+      "width": 4000,
+      "height": 3000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\pigf 10d-5WM-1.jpg",
+      "width": 4000,
+      "height": 3000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\pigf 10d-6WM-1.jpg",
+      "width": 4000,
+      "height": 3000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\pigf 2d-1WM-1.jpg",
+      "width": 4000,
+      "height": 3000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\pigf 4-5d-1WM-1.jpg",
+      "width": 4000,
+      "height": 3000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\pigf10d-8WM-1.jpg",
+      "width": 4000,
+      "height": 3000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\early\\pigfoot2WM-1.jpg",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\2346-86-_jpg.rf.d84a66d9ddc4dd6e39ac4cfd3cb54bd1 - Copy.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\2346-86-_jpg.rf.d84a66d9ddc4dd6e39ac4cfd3cb54bd1.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\5198047453_ab0d6212d0_bWM-1 - Copy.jpg",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\5198047453_ab0d6212d0_bWM-1.jpg",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\8400384539_93d1834718_o-382x600_jpg.rf.6d71f2aee8a547f238f61b17fa9f5d7c.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\Diseased-foot-11_jpg.rf.333ce66d542ab20c53e3b631b959def9.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\Diseased-foot-12_jpg.rf.097b9b8442d3417ca1b07831b94d37a4.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\Diseased-foot-13_jpg.rf.a7a1c706c7128a6a1c532e5511162df4.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\Diseased-foot-14_jpg.rf.aa09d0132e684019bff881d3f1850e5d.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\Diseased-foot-15_jpg.rf.6c2a03a5491e2492b4ee4e9936782e2b.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\Diseased-foot-16_jpg.rf.669d0d22550b680555d32b1f0d296e04.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\Diseased-foot-5_jpg.rf.f965aaf3ee544a7b4f4431c7c5f637de.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\Diseased-foot-8_jpg.rf.5dd0210298ef0dbf2e4e99cc0ee96cbb.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\Diseased-foot-9_jpg.rf.682ce915347993a671da52b3be60de48.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-Knuckles-_208_jpeg.rf.209ee7f4f5439cf0577004f6e9204505.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-Knuckles-_210_jpeg.rf.96613305f968eb7b13dd5a6aa7b8d05f.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-Knuckles-_214_jpeg.rf.8e4e82b5fe2e63d67e185c83a975d6ff.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-Knuckles-_216_jpeg.rf.44394318bb06f66f542b3343bf79463c.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-Knuckles-_225_jpeg.rf.0e0efefc55ca171a1137b34a35cfdcc8.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-Knuckles-_25-Copy_jpeg.rf.67c459d4fed6da714e97423457b3287c.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-Knuckles-_33-Copy_jpeg.rf.f8bc77dfb4b224463f72b89763e2d9bc.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-Knuckles-_34-Copy_jpeg.rf.fd915204062efe9e9bb9bff61a1ad1bb.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-Knuckles-_7-Copy_jpeg.rf.1df23e54b2e811276749502dc5d1ba9f.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-foot-lesions-13_jpg.rf.abb26b8d7043297c0e75bcf8351b4f71.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-foot-lesions-9_jpg.rf.531e95121d9a237adaaa74144862d71a.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-foot-lesions-9_jpg.rf.5e120a4fab553082a463b789d5ae295a.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\Foot-and-mouth-disease-in-cattle_fmd_000057_jpg.rf.1464fa853af89bc8340f9ae96dad4c9c.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\bvd-md-bulbs-heel-lesion_jpg.rf.eaa3c17e2429635c02a37cf37be06e79.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\bvd-md-foot-lesion_jpg.rf.725c4a909592b1f074e059b5bc8dd0b4.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\cow-hoof-with-FMD-sores-600px_jpg.rf.86afd67f9e5b83ed050d1817d6533408.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\foot-and-mougth-18-_jpg.rf.93e34163ac94abb8789ae503489d5599.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\moderate\\footlesion2WM-1.jpg",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\123qe-86-_jpg.rf.4181f69a98a4a661c21a4670c2577d37.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\Diseased-foot-18_jpg.rf.c49b89ed4c7d42b7ac5e2b324ba31270.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\Diseased-foot-19_jpg.rf.5332c0f68cd5dbd13b0266a3d1a722fa.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\Diseased-foot-20_jpg.rf.0fd4a82a468532ed5ba3e031d83cbee7.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\FMD-Knuckles-_1-Copy_jpeg.rf.a6c0b0bbd7efde45389b55a85282afe2.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\FMD-Knuckles-_57_jpeg.rf.0d19b8c85bb0dc34a0c97e457f187e2a.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\FMD-foot-lesions-4-Copy-10-_jpg.rf.1b97f766980c72d0b27c2310dcc142b1.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\FMD-foot-lesions-6-Copy-10-_jpg.rf.cb864e751e9c4780a720fffbc4ff5cd5.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\FMD_012_jpg.rf.8f8589771189c93edc1807d1bd2a2894.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\FMD_027_jpg.rf.f1613382dba4091ca3b802f9269c8fed - Copy.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\FMD_041_jpg.rf.b541132b95a8f052457bd5725e3463b6.jpg",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\IMG_2691WM.jpg",
+      "width": 1404,
+      "height": 2112
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\P1010992WM-1.jpg",
+      "width": 4320,
+      "height": 3240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\footlesionWM-1.jpg",
+      "width": 788,
+      "height": 600
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\foot\\severe\\img1025.jpg",
+      "width": 194,
+      "height": 259
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\00000025_jpg.rf.5bd7b9a5fbc8f113c42ca19654aa4a79.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\001_30_IMG_gro174291-009-848x565_jpg.rf.e944c77b45a43009c0e9cb35485edfcc.jpg",
+      "width": 848,
+      "height": 565
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\01a86e68-be09-46dc-b900-0595e7023660_Jpg_jpg.rf.dbb66dd9ff18d6df011d937601777757.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\03fa6dc4-7443-4e5f-9686-e3ec9de389ab_Jpg_jpg.rf.143f4749942e771b1d4d8c0fff59b698.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\0e58be01-6b80-4778-a8b9-72df51453492_Jpg_jpg.rf.8a3c44df51414b4a055393fb919b831a.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\11_jpg.rf.e679bf4df0e0239993e8e3dffc9936de.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\12_jpg.rf.b5c5eaa14d218057ba84012fdb19fa16.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\16_jpg.rf.3fd0b931246bc41e58e5804cec3d03c0.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\18_jpg.rf.4facb524e59e8bba6c3517ece4c60f73.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\19_jpg.rf.a6e97818a6821d01340eb564dde95985.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\19_jpg.rf.c91dc1b64964a32e149938799ceb9054.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1_jpg.rf.dad9b0c68dcabece93c74984d83ebd37.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1b1393d7-33a9-478a-9a17-9ccfdb816a93_Jpg_jpg.rf.efcff401291f3d0edd6d0b1aefc29b79.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1b583cfd-3f62-461d-9069-e4d18a4d9b5e_Jpg_jpg.rf.83df8ea185e1f7b519f4c7088ea7f97a.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1b888077-df2a-46cf-b052-7b03d4074593_Jpg_jpg.rf.a86e26a3af54fa72a42af783f6cde821.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1bb52f6a-be9a-4487-b202-26983ffcb41f_Jpg_jpg.rf.47a10b8cf7060d0e40fa2c144c9e9baa.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1c4b0103-7228-4d5a-a62e-eb7faefe3689_Jpg_jpg.rf.67eb718b07009e7cc2dd1be49e5bf01f.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1cd11da1-beab-4f58-94b0-346c92fa1685_Jpg_jpg.rf.8d2de966d52beb5663d2bc5824a77acd.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1db2b203-2304-442f-ae72-64498d643584_Jpg_jpg.rf.00d202de9d2ce9aaa3d21e693b9a9b69.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1e5a9458-0065-401c-9ec5-dfc76c089248_Jpg_jpg.rf.14bc15248031509b88c98d9114630592.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1f0051d0-7490-43bb-9fed-cccd4b0d283e_Jpg_jpg.rf.6934e28756bab85e0f9a9eaf5b1ca349.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1f4f933d-f061-43d6-b4b1-73754e20251f_Jpg_jpg.rf.6553c15c14fd35a5a2aef775fc2a7f44.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\1f9929ef-6cd5-40e3-835c-cde2eff44dd8_Jpg_jpg.rf.b0eddb26b90e4b04be040551de96983d.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\20_jpg.rf.618bb4cd4784e7102a45fafe2033105b.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\21_jpg.rf.9dfdd24abfe88dcb797a8c0386a08051.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\23_jpeg.rf.21d2b519a0e008546fd5064cc7992a50.jpg",
+      "width": 225,
+      "height": 225
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\23_jpg.rf.a02909df543e748afb4383a435fb387e.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_122113485_CIkpnTbPlBoIhSEcgnzXvJh4oKnHbn0d.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_122288568_oLqolL60QZsP3U2Pe2vWlD5I8lNNuscZ.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_154225591_vPYsG3Hh1a71rpKmxsl5OsWJ2SIcRD2C.jpg",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_161808943_wwx6djhOrFZJdg2YICgv1bF0aNybGu02.jpg",
+      "width": 338,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_167384364_pODsthsEr0cn1nP9Tu6T52ih17RRPl25.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_171446027_SqNDLhopAYQfdYaSickiENeh1IzWqnz8.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_177947184_UxvWtDQWp4NBtRZDyoiWYKC1uzM1rl8C.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_180477571_8TN4X8DDlhrr5mSUo4LsyLYMacIjU6AS.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_20517937_nGD0zksGkaq1h6BV102iWsKv9i32QTH3.jpg",
+      "width": 252,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_218672600_WFOmZl8Mjr6tiexPsoDgLE0IInumJSMf.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_386516807_gCVYx70xcIkQCF3BLvvY7XTfMgJPEjVk.jpg",
+      "width": 359,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_398098538_fBIaajwhh4oh1uW2R3BD6c8UXDOteoi9.jpg",
+      "width": 364,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_404488501_N3vYXAsB8fJwjjERPyrbvL8KGx0aPpod.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_432132541_NVORVdPdzL6unHGKho03rNJpbUs047HH.jpg",
+      "width": 300,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_43573914_5WmoXzhWbbwcW67onvMNJgfxbAN84CF0.jpg",
+      "width": 361,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_442732426_OgMZX3IVUGZ3v4Mp9ALB84Mp5dvgJGbh.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_449891027_HJMNzPPTE77uWHpFbZGZGum6UQi2trDN.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_480163976_zHnoitsyUbCJ5JzECJxELQ9bQpvwk5af.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_49233136_bngUqGyYnQUkU029KB7FYShHi1G3kQ3B.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_506071000_7Df93zpafSlFypgjTEHId9OQ9ivdNB5m.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_512779358_Mf7pACBOxXUMrs7XvbosD45BptnLn1CW.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_512779360_omJleLYRBmlY1WkQBtUNXsZAkQn8sQCr.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_543200022_XKKfJAhrliOMAabkNrB5OqjUVuJ7uTJ9.jpg",
+      "width": 225,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_57701541_H73gTt6BM2tophMsEmC5ZENm9WjmUZIb.jpg",
+      "width": 300,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_60156316_aXsM4ecfV6zi25PAhHaw2179WWrYeCH5.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_650846322_RG8uTS9Qo5kpIjd5PdQM2U9glkaoCwXo.jpg",
+      "width": 363,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_65291716_JPutZsDcLF9DmhJhhumX773GysWDYuZi.jpg",
+      "width": 359,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_81533125_u4nvR9lQjwasHRrNagmwN1BPyQqyJYL3.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_838454755_jUulktopEagsU43HkrfeXB4tv0cS5KUF.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_85535242_lAYUtehKPAtxt7sSBYgNXEhGNalxUNg5.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\240_F_968350825_N3HbfA2OFuG7TAF4aLDkKGmG67M47GXr.jpg",
+      "width": 360,
+      "height": 240
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\24_jpg.rf.ab3d7a3d827a67ea58d98bc7cbd5976d.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\25_jpg.rf.43a8fbd9834ce7066333a896b8a1320b.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\26_jpeg.rf.4edecea7d60cf23de7316855d00b4f7c.jpg",
+      "width": 275,
+      "height": 183
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\26_jpg.rf.e5f95ef0068bb193b7d274d44942aca1.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\27_jpeg.rf.e714e7583078cec57bd3f87765eaa73d.jpg",
+      "width": 274,
+      "height": 184
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\27_jpg.rf.1b366c13b0fb675ae74578ede62dfb81.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\29_jpg.rf.2d956e955bab5cca469218dcb8376c59.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\2_jpg.rf.4b42fe6864496d700cf4159104c3fd23.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\2ccea00d-7be7-41ad-a510-fcfb71ce6c94_Jpg_jpg.rf.1f6d169b4ca2affefc5c836faf741208.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\30_jpg.rf.0fa4fb93fdb7e6114d4aa944567dd738.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\31_jpg.rf.16c54c75bb4216fa17bda521bcd83cff.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\32_jpg.rf.93ae0b5192ccd2faadbc26c72b4a70a3.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\34_jpg.rf.034e1f20188bbd6971ab0b7b2ebce774.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\3c1bed27-aaa6-44fc-b432-5e23af994c30_Jpg_jpg.rf.934bb11bf80597a375a48a1c088a91fd.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\3d91a7ee-e39b-42e9-be1a-e2215fc44cfd_Jpg_jpg.rf.a561b8600f034eb4f0ef4e68bc62c11d.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\3df15c1e-30f0-4712-a441-12cddb8da1a3_Jpg_jpg.rf.b3301295a7b2398272f298a0b5262aba.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\3dff9e98-6a53-4f9b-8c24-76f791cfc9e0_Jpg_jpg.rf.78ee2e00c8844d4f62e2968951b31bf1.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\3ff475d6-87ea-4862-b9b0-c2aee5ee1650_Jpg_jpg.rf.361f4d6ad46da8c90c58183caec10ec3.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\4e412dd5-13b4-40ee-b5b5-18fea377f490_Jpg_jpg.rf.15902f6bf2ee0c23cfb6b6e414bcf203.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\54cd3ac4-81d8-493a-b0b2-588b703930b8_Jpg_jpg.rf.c138aa2b6139a6b76a6a25931d9ec115.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\5c4e65db-c68b-4282-a4de-f36003f7b613_Jpg_jpg.rf.ab01bca9d7228418c9396183382ae237.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\6_jpeg.rf.04653c2c5ebff46d067a98168e0258d9.jpg",
+      "width": 263,
+      "height": 191
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\6b3cf849-c22f-4bd3-807e-290f0b6da2c4_Jpg_jpg.rf.eb41875a7c7a009f6dbf8530e72c7af6.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\7_jpeg.rf.2f21c48fe8e1d3ed315796ac0f391578.jpg",
+      "width": 275,
+      "height": 183
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\8_jpeg.rf.65ae256b6418318dba355b904c84278a.jpg",
+      "width": 335,
+      "height": 150
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\9_jpg.rf.3a5de3c161f37f672b688a83b431f1f5.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_102751023_Preview_jpeg.rf.1ba06fb1b6fe9feb827272356af1ae33.jpg",
+      "width": 667,
+      "height": 1000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_1083172539_Preview_jpeg.rf.752368f0a701bde26830082ffcdfbe04.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_109023981_Preview_jpeg.rf.e1f0923f5554b4c41f123d1ff938216a.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_111798658_Preview_jpeg.rf.a5f4c045e498ccb3e05f20d48d8d6081.jpg",
+      "width": 1000,
+      "height": 670
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_122030327_Preview_jpeg.rf.5a845168b35eede831603660ab5cf761.jpg",
+      "width": 1000,
+      "height": 686
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_122113485_Preview_jpeg.rf.a5b04eb8166526b8ae08a544055cadaa.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_1222349879_Preview_jpeg.rf.4871ad5f8ee8ebbdd0a2e7831295efbc.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_122288568_Preview_jpeg.rf.29d431d8bcca6541cca59cb56543ac77.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_131559137_Preview_jpeg.rf.683022bc3cff6eca0b4736c935c0f240.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_144842083_Preview_jpeg.rf.b14823bbd146dd6157a41a774db22ee5.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_14812751_Preview_jpeg.rf.728a7eae4739e641d008706755b818a9.jpg",
+      "width": 667,
+      "height": 1000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_14812751_Preview_jpeg.rf.f81989243ea0781e5d04b9226d1c46e3.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_154225652_Preview_jpeg.rf.6106233bdb15e0994c45bfc878c41436.jpg",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_159261631_Preview_jpeg.rf.b65bb9815e7c5659b0f5686c875aea8e.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_16321284_Preview_jpeg.rf.b331ee9ac2ff64a3842924b489ed3296.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_167384364_Preview_jpeg.rf.ec93160d7d1388233073402ca89c9b8b.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_169901628_Preview_jpeg.rf.5ed898b6764806e3cb7eb2344a377e1a.jpg",
+      "width": 667,
+      "height": 1000
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_170874339_Preview_jpeg.rf.691471a7a1223ece3275c27b4080f81f.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_171446027_Preview_jpeg.rf.d4aa9be919febd84e03ce3ec72d351d1.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_171446256_Preview_jpeg.rf.408737be585c2b289c6b539fb6de61cc.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_209933484_Preview_jpeg.rf.d776726912ed253666d071feaa24ed37.jpg",
+      "width": 1000,
+      "height": 668
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_218672600_Preview_jpeg.rf.b15dd7eafea9adf3c3058a69637b18cb.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_220015949_Preview_jpeg.rf.7eeca4d11b1ca285d00750381a13dfb7.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_224670354_Preview_jpeg.rf.ba2679e28a186b260d1cfb61c885bbf6.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_23228077_Preview_jpeg.rf.ca02f82ef5f2b7c8c47c0bf2d864175a.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_23228077_Preview_jpeg.rf.d235b0c548425c83feca820bfb612c24.jpg",
+      "width": 1000,
+      "height": 665
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_23574098_Preview_jpeg.rf.83dfa21d1eff70477307c1416ae43026.jpg",
+      "width": 1000,
+      "height": 665
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_237417432_Preview_jpeg.rf.61fabbec1f86ef501e83410c497e6f74.jpg",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_24627891_Preview_jpeg.rf.95a68a4b23c2417ef006fd320c75d151.jpg",
+      "width": 1000,
+      "height": 667
+    },
+    {
+      "path": "D:\\cow_skin_detection\\dataset\\healthy\\AdobeStock_251420633_Preview_jpeg.rf.e23a004cb1cc9e0c3baab44e21c031d5.jpg",
+      "width": 751,
+      "height": 1000
+    }
+  ],
+  "exact_duplicate_groups": [
+    {
+      "hash": "0294664834b5baeca1332cd71becb153",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\foot\\early\\2346-128-_jpg.rf.2b458f808811a8c2edc380ed6bb3c717 - Copy.jpg",
+        "D:\\cow_skin_detection\\dataset\\foot\\early\\2346-128-_jpg.rf.2b458f808811a8c2edc380ed6bb3c717.jpg"
+      ]
+    },
+    {
+      "hash": "6f78d0a8d1e45741fdb41cb367eaeb3c",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\foot\\early\\2346-58-_jpg.rf.6d026120b14637e74e79cad115a04865 - Copy.jpg",
+        "D:\\cow_skin_detection\\dataset\\foot\\early\\2346-58-_jpg.rf.6d026120b14637e74e79cad115a04865.jpg"
+      ]
+    },
+    {
+      "hash": "39a224f39b3a66b04926433fad282d76",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\foot\\early\\FMD-Knuckles-_25-Copy_jpeg.rf.67c459d4fed6da714e97423457b3287c.jpg",
+        "D:\\cow_skin_detection\\dataset\\foot\\moderate\\FMD-Knuckles-_25-Copy_jpeg.rf.67c459d4fed6da714e97423457b3287c.jpg"
+      ]
+    },
+    {
+      "hash": "eb3da279bf69e14564105ab4b91278bb",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\foot\\moderate\\2346-86-_jpg.rf.d84a66d9ddc4dd6e39ac4cfd3cb54bd1 - Copy.jpg",
+        "D:\\cow_skin_detection\\dataset\\foot\\moderate\\2346-86-_jpg.rf.d84a66d9ddc4dd6e39ac4cfd3cb54bd1.jpg"
+      ]
+    },
+    {
+      "hash": "a356829467f0f7f0acb81cd53ec0f7af",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\foot\\moderate\\5198047453_ab0d6212d0_bWM-1 - Copy.jpg",
+        "D:\\cow_skin_detection\\dataset\\foot\\moderate\\5198047453_ab0d6212d0_bWM-1.jpg"
+      ]
+    },
+    {
+      "hash": "23ab6cee62a8a6d238862a233785cf43",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\foot\\severe\\img1025.jpg",
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\img1025.jpg"
+      ]
+    },
+    {
+      "hash": "86a78ea092dce64a264eb44136af0777",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\IMG20240328112904_png_jpg.rf.0746e23b2472be973343667a6f1252b1.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\IMG20240328112904_png_jpg.rf.ca2830102605d7d9d246e9452983535c.jpg"
+      ]
+    },
+    {
+      "hash": "82fea35ef84884cf0896fec274e869c1",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\IMG20240328113424_png_jpg.rf.1d2f966a225289458f7a74b04ed35cc2.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\IMG20240328113424_png_jpg.rf.2bac6e272a87db6071bf7a298be72ac1.jpg"
+      ]
+    },
+    {
+      "hash": "2f81f4521af4c1159a652ce601a7f117",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\IMG20240328113533_png_jpg.rf.66924b410faad66e84dac7731431e58e.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\IMG20240328113533_png_jpg.rf.9296e69b2ae56d95ae08b0bb9b5559e9.jpg"
+      ]
+    },
+    {
+      "hash": "eaab0e31f4b5319edb298c61c012e5fe",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\IMG20240328113804_png_jpg.rf.14d5108602b7c8dd40ea6afae8539f99.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\IMG20240328113804_png_jpg.rf.5e1bd588da2a65a87820a88ffff6e591.jpg"
+      ]
+    },
+    {
+      "hash": "df333b38e9f3ba222a805dd99c2215ac",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\gh-132-_png_jpg.rf.2d48aacab69074634f1c231a4dcde796.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\gh-132-_png_jpg.rf.639abc3691cd155e4647eb36cec6ba27.jpg"
+      ]
+    },
+    {
+      "hash": "facf05b522b5f57005a0844a90add63c",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\gh-199-_png_jpg.rf.422301c4e729d21b11797326d3f49116.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\gh-199-_png_jpg.rf.a455d1f537e3271cd0fc231fb050c98a.jpg"
+      ]
+    },
+    {
+      "hash": "01d10613005bfee79dd1b81a50cea437",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\gh-68-_png_jpg.rf.05112df3969641fd84321f2b9a1a0f62.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\gh-68-_png_jpg.rf.21bee24d8ba79a3853c0561a3f991abf.jpg"
+      ]
+    },
+    {
+      "hash": "f88e6af5dea2667e903ab5ac44c8cef1",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\gh-95-_png_jpg.rf.6de5c820283aa7716abc3b0350e2ce90.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\gh-95-_png_jpg.rf.d53566fec4d95aeecea814ddfec60f35.jpg"
+      ]
+    },
+    {
+      "hash": "fb2c50bd9f6a5f7fed64c8d6c2f08156",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\images (1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\images (14).jpg"
+      ]
+    },
+    {
+      "hash": "76455f5cf3a3534361f51276f9f0a2c5",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs163(1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs163.jpg"
+      ]
+    },
+    {
+      "hash": "7bd04c2247b53d02a4bf83799988867e",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs164(1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs164.jpg"
+      ]
+    },
+    {
+      "hash": "f0a1b10970984b4f473faaaca7fb162f",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs165(1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs165.jpg"
+      ]
+    },
+    {
+      "hash": "6747eb0396d0dab8e8ce1a23ea1694b7",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs166(1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs166.jpg"
+      ]
+    },
+    {
+      "hash": "3c86b47910062f2f901cb06c78973bbf",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs167(1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs167.jpg"
+      ]
+    },
+    {
+      "hash": "16dc1a98d0e83d7fb6386f33f23a694a",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs169(1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs169.jpg"
+      ]
+    },
+    {
+      "hash": "12a174fe5a1f2f2605d29982749a0589",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs170(1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs170.jpg"
+      ]
+    },
+    {
+      "hash": "360bd54988acc935e92314c505391196",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs171(1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs171.jpg"
+      ]
+    },
+    {
+      "hash": "93f744466e842eb4e9671450aa033558",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs172(1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs172.jpg"
+      ]
+    },
+    {
+      "hash": "d82f92ce17912caee5e40e279a6a0772",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs173(1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs173.jpg"
+      ]
+    },
+    {
+      "hash": "650724f31ac185b63584a4c55fc85286",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs174(1).jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\imgs174.jpg"
+      ]
+    },
+    {
+      "hash": "e8aa74a6ba6fa9caa3901560a32bb890",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-153-_jpg.rf.e6fe206e931011ed0d61dbe17f91b6f7.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-153-_jpg.rf.fb1486a0dc2f7ba3491bc950dfcdff79.jpg"
+      ]
+    },
+    {
+      "hash": "c40dafa74f4b3e3709522495587a5a6c",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-162-_jpg.rf.217899782998bb1a46cc6d874006b972.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-162-_jpg.rf.5df2e86ebcc83eb171b8f414f16cc505.jpg"
+      ]
+    },
+    {
+      "hash": "cfe4da7d6438c88b0fd8da39713c8260",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-195-_jpg.rf.5321a6ac11c27c66b2504f4e7fb1849d.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-195-_jpg.rf.b2020999e71679e4ea19db33a960c5f0.jpg"
+      ]
+    },
+    {
+      "hash": "b5fae998a08d9caec4bdd6c403cae5bb",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-196-_jpg.rf.5fc44bc59618c3a62db877fe389e0883.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-196-_jpg.rf.f7f9e3c4a0021c1f061e532f5b0d9941.jpg"
+      ]
+    },
+    {
+      "hash": "06eb1e1835841f36723d1767ab74b3f2",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-253-_jpg.rf.343b358eb2d28078c58247f437cc6044.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-253-_jpg.rf.efecc07ac369a068349306a36f554c3c.jpg"
+      ]
+    },
+    {
+      "hash": "7b81e6eeb493397c3580770069a62f22",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-3-_jpg.rf.2d74b1e3b7cd6001fcbf3818a97aa485.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-3-_jpg.rf.dbbe557650ab0be9ace6d5c09be5f5f3.jpg"
+      ]
+    },
+    {
+      "hash": "f621b4e2537d7d3db661064f4be9196d",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-329-_jpg.rf.a9e5cfd1521da6a9cae9089ad1407a7a.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-329-_jpg.rf.e0bbfa729b7b883fbf6c904345b6058d.jpg"
+      ]
+    },
+    {
+      "hash": "d3408ef8cc1ca85bdaa2e8197f1931de",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-333-_jpg.rf.38605913e6540686eaa356d4123a3b6a.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-333-_jpg.rf.9a9dcb688326f464fd152fce45206eef.jpg"
+      ]
+    },
+    {
+      "hash": "2deaf1c56315200f87af85a95c2788ea",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-391-_jpg.rf.3686b2cbef535ad534029d0b3d83c086.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-391-_jpg.rf.8b9b605164bcd73a041179f4fc2a32d1.jpg"
+      ]
+    },
+    {
+      "hash": "c4cc6eb0067447b74174e6513a30cf47",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-422-_jpg.rf.7748bf711d9921ad940b0bc3ee2d43ce.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-422-_jpg.rf.d2de46442c2530a60d0e86f94987b223.jpg"
+      ]
+    },
+    {
+      "hash": "b502f5eec748127a6a183ea2380c160d",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-477-_jpg.rf.0d362b0a15c3a431dc9cfa09159568d6.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-477-_jpg.rf.590197429c87ddfaa965fdd2fce51bc4.jpg"
+      ]
+    },
+    {
+      "hash": "be4858432e92a53782d262943fd12b40",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-68-_jpg.rf.213ec14585f9172e1b8569f5cde13e2b.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-68-_jpg.rf.9fe280a39b75375634ccfe4b72a7f36f.jpg"
+      ]
+    },
+    {
+      "hash": "1902a219e77c8dce657b8eb8b9c781a2",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-90-_jpg.rf.949c1830512c7fd7bfc98012c6974eae.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-90-_jpg.rf.fdea360704a04ceed29fcf65043e89cf.jpg"
+      ]
+    },
+    {
+      "hash": "e76f5a486f9b34f616a1c81946ff6b66",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-96-_jpg.rf.10aec24a763709b570e0f3efb9f44345.jpg",
+        "D:\\cow_skin_detection\\dataset\\healthy\\mm-96-_jpg.rf.d9bd7f64a82c9d5ebe0488f669fe1903.jpg"
+      ]
+    },
+    {
+      "hash": "0f0d8fe7b57d4b333e26e7fd0c9b4825",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\Screenshot__-_-_-_-_-_-_-_-_-_-_-_-_-_-_png_jpg.rf.78ee357a1c7ff4fcb8b1da4ca8628d48.jpg",
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\Screenshot__-_-_-_-_-_-_-_-_-_-_-_-_-_-_png_jpg.rf.ca0668ec17e2e4c1d3870431976705dd.jpg"
+      ]
+    },
+    {
+      "hash": "fa823c09b378eee93854df8e314ece90",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\Screenshot__-_-_-_-_-_-_-_-_-_-_-_-_-_-_png_jpg.rf.865538f0552e6b25430c580b066834f1.jpg",
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\Screenshot__-_-_-_-_-_-_-_-_-_-_-_-_-_-_png_jpg.rf.c8e8d1b63c6fcb50acee9c99788bf8cd.jpg"
+      ]
+    },
+    {
+      "hash": "c1768ebbf15722a8f2ba648e6182d377",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\Screenshot__-_-_-_-_-_-_-_-_-_-_-_-_-_-_png_jpg.rf.99d17b58f03de185f1e4596c7cb7d515.jpg",
+        "D:\\cow_skin_detection\\dataset\\lumpy\\moderate\\Screenshot__-_-_-_-_-_-_-_-_-_-_-_-_-_-_png_jpg.rf.1f6fd554a8becdd7afee47bbfe7e2244.jpg"
+      ]
+    },
+    {
+      "hash": "f66cc823bfdea7942d445c37e3173170",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\Screenshot__-_-_-_-_-_-_-_-_-_-_-_-_-_-_png_jpg.rf.c16068a13256e676678c62b2d67f2cfd.jpg",
+        "D:\\cow_skin_detection\\dataset\\lumpy\\moderate\\Screenshot__-_-_-_-_-_-_-_-_-_-_-_-_-_-_png_jpg.rf.e60f7a554b88de8ad7147592711db372.jpg"
+      ]
+    },
+    {
+      "hash": "d61ed1f9e7a2e9e45c6b4aa9093b42af",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\Screenshot__-_-_-_-_-_-_-_-_-_-_-_-_-_-_png_jpg.rf.ff57cddea061e15e2b79191ab2efd61a.jpg",
+        "D:\\cow_skin_detection\\dataset\\lumpy\\moderate\\Screenshot__-_-_-_-_-_-_-_-_-_-_-_-_-_-_png_jpg.rf.e7216f82f419e6494e8e96e3864192cb.jpg"
+      ]
+    },
+    {
+      "hash": "1f7e6618333cfc07bbc812b459facc2f",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\ergthyjk-1-_jpg.rf.7aef6e8423d8dd07ca01d9abb5d2b1a8.jpg",
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\ergthyjk-1-_jpg.rf.a9057b59cc0ff023a424ad94c0de35a8.jpg"
+      ]
+    },
+    {
+      "hash": "f4c7479928222e918b6860879973319a",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\ergthyjk-18-_jpg.rf.6c4fc27360789e98e96eecf19388af0b.jpg",
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\ergthyjk-18-_jpg.rf.9fd1f610c8aeb8b5bb6bb74f1dca13de.jpg"
+      ]
+    },
+    {
+      "hash": "19396be8c71c5dbef33194e64dc172dd",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\images-34-1-_png_jpg.rf.1cd22d90e3d3ee8febe56aa95bd2ca0d.jpg",
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\images-34-1-_png_jpg.rf.3a36e238111c7865e4043aed96154770.jpg"
+      ]
+    },
+    {
+      "hash": "95294da06245aa014e409853fe48032c",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\images-43-1-_png_jpg.rf.b549d8f53bbd7780f4c6423e32f91a18.jpg",
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\images-43-1-_png_jpg.rf.c3ab6b2f3977145a69a0d7f2a510ee57.jpg"
+      ]
+    },
+    {
+      "hash": "f29d16e04018c44630653593380af3db",
+      "paths": [
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\images-45-1-_png_jpg.rf.2b92b591fed3944da28256e2db39a697.jpg",
+        "D:\\cow_skin_detection\\dataset\\lumpy\\early\\images-45-1-_png_jpg.rf.5882c24c145ffc66af850698ac0fd15f.jpg"
+      ]
+    }
+  ],
+  "exact_duplicate_file_count": 242,
+  "total_images": 8699,
+  "exact_duplicate_group_count": 121,
+  "images_by_disease": {
+    "Foot and Mouth": 1553,
+    "Healthy": 2948,
+    "Lumpy": 3724,
+    "Mastitis": 474
+  },
+  "images_by_folder": {
+    "foot": 86,
+    "healthy": 2948,
+    "lumpy": 3724,
+    "mastitis": 474,
+    "mouth": 1467
+  },
+  "common_dimensions_sample": [
+    [
+      "640x640",
+      61
+    ],
+    [
+      "640x800",
+      55
+    ],
+    [
+      "360x240",
+      20
+    ],
+    [
+      "1000x667",
+      17
+    ],
+    [
+      "4000x3000",
+      9
+    ],
+    [
+      "1024x768",
+      3
+    ],
+    [
+      "667x1000",
+      3
+    ],
+    [
+      "768x1024",
+      2
+    ],
+    [
+      "359x240",
+      2
+    ],
+    [
+      "300x240",
+      2
+    ]
+  ],
+  "dimension_sample_size": 200,
+  "rotated_duplicate_detection": "Not performed reliably in this experiment. Only exact byte-level duplicates were detected via MD5 hashing."
+}

@@ -1,0 +1,19 @@
+dataset_folder,image_count,mapped_disease,record_type,stage,stage_subdirectories
+healthy,2948,Healthy,,,
+healthy,2948,Healthy,stage_breakdown,none,
+lumpy,3724,Lumpy,,,"early,moderate,severe"
+lumpy,1855,Lumpy,stage_breakdown,early,
+lumpy,1230,Lumpy,stage_breakdown,moderate,
+lumpy,639,Lumpy,stage_breakdown,severe,
+mastitis,474,Mastitis,,,"early,moderate,severe"
+mastitis,250,Mastitis,stage_breakdown,early,
+mastitis,112,Mastitis,stage_breakdown,moderate,
+mastitis,112,Mastitis,stage_breakdown,severe,
+foot,86,Foot and Mouth,,,"early,moderate,severe"
+foot,39,Foot and Mouth,stage_breakdown,early,
+foot,32,Foot and Mouth,stage_breakdown,moderate,
+foot,15,Foot and Mouth,stage_breakdown,severe,
+mouth,1467,Foot and Mouth,,,"early,moderate,severe"
+mouth,394,Foot and Mouth,stage_breakdown,early,
+mouth,771,Foot and Mouth,stage_breakdown,moderate,
+mouth,302,Foot and Mouth,stage_breakdown,severe,

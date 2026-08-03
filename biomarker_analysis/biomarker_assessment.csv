@@ -1,0 +1,6 @@
+biomarker,missing_pct,kruskal_wallis_p,max_abs_cohens_d_vs_healthy,high_correlations,stage_mean_pattern,evidence_summary,recommendation
+lesion_density,0.0,0.8359338849158656,0.4933,,"early=0.139, moderate=0.205, severe=0.129",missing=0.0%; Kruskal-Wallis p=0.8359; max |Cohen's d|=0.493,Needs further validation
+texture_roughness,0.0,6.572303564968563e-08,1.3653,,"early=0.463, moderate=0.439, severe=0.446",missing=0.0%; Kruskal-Wallis p=6.572e-08; max |Cohen's d|=1.365,Potentially useful
+color_variation,0.0,0.28198296868907163,0.3822,,"early=0.804, moderate=0.727, severe=0.754",missing=0.0%; Kruskal-Wallis p=0.282; max |Cohen's d|=0.382,Needs further validation
+lesion_clustering,49.17,0.6104172417542537,0.4632,,"early=0.423, moderate=0.425, severe=0.405",missing=49.2%; Kruskal-Wallis p=0.6104; max |Cohen's d|=0.463,Currently unreliable
+boundary_irregularity,38.33,0.41855975549808566,0.4581,,"early=0.661, moderate=0.771, severe=0.548",missing=38.3%; Kruskal-Wallis p=0.4186; max |Cohen's d|=0.458,Currently unreliable
