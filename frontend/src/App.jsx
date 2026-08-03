@@ -1,6 +1,10 @@
 import { useState, useRef } from 'react'
 import axios from 'axios'
 import './App.css'
+import EvidenceExplanation from './components/EvidenceExplanation'
+import RankedEvidence from './components/RankedEvidence'
+import ClinicalSummary from './components/ClinicalSummary'
+import BiomarkerDetails from './components/BiomarkerDetails'
 
 function App() {
   const [imageFile, setImageFile] = useState(null)
@@ -60,6 +64,16 @@ function App() {
     }
   }
 
+  const stageKey = (result?.stage || 'unknown').toLowerCase()
+  const hasEbdrePanel =
+    result &&
+    (result.clinical_support_score != null ||
+      result.evidence_strength ||
+      result.ranked_evidence ||
+      result.clinical_summary ||
+      result.biomarkers ||
+      result.ebdre_error)
+
   return (
     <div className="app-container">
       <header className="header">
@@ -109,32 +123,48 @@ function App() {
             <div className="result-card">
               <div className="result-header">
                 <h2>Prediction Results</h2>
-                <div className="confidence-badge">Confidence: {result.confidence}</div>
+                <div className="confidence-badge">Confidence: {result.confidence ?? '—'}</div>
               </div>
               
               <div className="result-details">
                 <div className="detail-item">
                   <span className="label">Disease:</span>
-                  <span className="value disease">{result.disease}</span>
+                  <span className="value disease">{result.disease ?? '—'}</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Stage:</span>
-                  <span className={`value stage stage-${result.stage.toLowerCase()}`}>
-                    {result.stage}
+                  <span className={`value stage stage-${stageKey}`}>
+                    {result.stage ?? '—'}
                   </span>
                 </div>
               </div>
 
-              <div className={`alert-box alert-${result.stage.toLowerCase()}`}>
-                <strong>Alert:</strong> {result.alert}
+              <div className={`alert-box alert-${stageKey}`}>
+                <strong>Alert:</strong> {result.alert ?? '—'}
               </div>
               
               <div className="recommendation-box">
                 <h3>Recommendation</h3>
-                <p>{result.recommendation}</p>
-                <p className="description">{result.description}</p>
+                <p>{result.recommendation ?? '—'}</p>
+                {result.description && (
+                  <p className="description">{result.description}</p>
+                )}
               </div>
             </div>
+
+            {hasEbdrePanel && (
+              <div className="ebdre-section">
+                <h2 className="ebdre-section-title">Evidence-Based Reasoning (EBDRE)</h2>
+                <EvidenceExplanation result={result} />
+                <RankedEvidence rankedEvidence={result.ranked_evidence} />
+                <ClinicalSummary
+                  summary={result.clinical_summary}
+                  fallbackDisease={result.disease}
+                  fallbackStage={result.stage}
+                />
+                <BiomarkerDetails biomarkers={result.biomarkers} />
+              </div>
+            )}
 
             {result.progression_images && Object.keys(result.progression_images).length > 0 && (
               <div className="progression-view">

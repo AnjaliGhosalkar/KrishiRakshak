@@ -12,6 +12,8 @@ import joblib
 from tensorflow.keras.models import Model
 from tensorflow.keras.applications.mobilenet import MobileNet, preprocess_input
 
+from ebdre.engine import safe_run_ebdre_pipeline
+
 app = Flask(__name__)
 CORS(app)
 
@@ -143,15 +145,41 @@ def predict():
         description = DISEASE_INFO.get(disease, {}).get("description", "")
         
         progression_images = get_progression_images(disease)
+
+        # EBDRE reasoning layer (after CNN+RF). Uses original RGB image.
+        # Failures here must not break the existing prediction response.
+        image_rgb = np.array(img.convert("RGB"))
+        ebdre_result = safe_run_ebdre_pipeline(
+            image_rgb=image_rgb,
+            disease=disease,
+            stage=stage,
+            cnn_confidence=confidence,
+        )
         
         return jsonify({
             "disease": disease.capitalize(),
             "stage": stage.capitalize(),
+            # Keep legacy field for current React UI
             "confidence": f"{confidence:.2f}%",
             "alert": alert,
             "recommendation": recommendation,
             "description": description,
-            "progression_images": progression_images
+            "progression_images": progression_images,
+            # EBDRE fields
+            "cnn_confidence": ebdre_result.get("cnn_confidence"),
+            "clinical_support_score": ebdre_result.get("clinical_support_score"),
+            "evidence_strength": ebdre_result.get("evidence_strength"),
+            "available_evidence": ebdre_result.get("available_evidence"),
+            "confidence_level": ebdre_result.get("confidence_level"),
+            "ranked_evidence": ebdre_result.get("ranked_evidence", []),
+            "clinical_summary": ebdre_result.get("clinical_summary"),
+            "biomarkers": ebdre_result.get("biomarkers"),
+            "evidence_matching": ebdre_result.get("evidence_matching"),
+            **(
+                {"ebdre_error": ebdre_result["ebdre_error"]}
+                if ebdre_result.get("ebdre_error")
+                else {}
+            ),
         })
         
     except Exception as e:
