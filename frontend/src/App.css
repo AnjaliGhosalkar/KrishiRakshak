@@ -289,14 +289,60 @@ body {
 
 /* Progression View */
 .progression-view {
-  margin-top: 1rem;
+  width: 100%;
+  padding: 1.5rem;
 }
 
-.progression-view h3 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.progression-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.progression-heading h3 {
+  margin-bottom: 0.35rem;
   color: #111827;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+}
+
+.progression-heading .ebdre-subtitle {
+  margin-bottom: 0;
+}
+
+.progression-disease {
+  flex: 0 0 auto;
+  padding: 0.4rem 0.75rem;
+  border-radius: 9999px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.progression-disease.stage-early {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.progression-disease.stage-moderate {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.progression-disease.stage-severe {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.progression-empty {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.6rem;
+  background: #f8fafc;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
 .progression-grid {
@@ -307,14 +353,10 @@ body {
 
 .progression-card {
   background: white;
-  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.6rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-
-.progression-card:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
 }
 
 .progression-card img {
@@ -345,6 +387,106 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.result-visualizations {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  gap: 1.25rem;
+}
+
+.result-visualization-card {
+  min-width: 0;
+}
+
+.result-visualization-image {
+  display: block;
+  width: 100%;
+  max-height: 440px;
+  object-fit: contain;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+}
+
+.visual-description-text {
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.vqa-section {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.vqa-section h2 {
+  font-size: 1.35rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.vqa-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+.vqa-controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.vqa-controls input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  color: var(--text-main);
+  font: inherit;
+}
+
+.vqa-controls input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.vqa-ask-button {
+  min-width: 5rem;
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--primary);
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.vqa-ask-button:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.vqa-ask-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.vqa-answer {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: #f8fafc;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.vqa-answer p + p {
+  margin-top: 0.5rem;
 }
 
 .ebdre-section-title {
@@ -591,6 +733,14 @@ body {
 @media (max-width: 640px) {
   .summary-meta {
     grid-template-columns: 1fr;
+  }
+
+  .vqa-controls {
+    flex-direction: column;
+  }
+
+  .progression-heading {
+    flex-direction: column;
   }
 
   .ranked-evidence-item {

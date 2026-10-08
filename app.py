@@ -1,18 +1,27 @@
 import os
 import random
 import base64
+from uuid import uuid4
 from io import BytesIO
 import numpy as np
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 import tensorflow as tf
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory, url_for
 from flask_cors import CORS
 import joblib
+
+
+
+
 
 from tensorflow.keras.models import Model
 from tensorflow.keras.applications.mobilenet import MobileNet, preprocess_input
 
+from biomarker_extraction import extract_biomarkers
 from ebdre.engine import safe_run_ebdre_pipeline
+from mobilenet_gradcam import explain_saved_mobilenet
+from rf_shap_explainer import explain_rf_prediction
+from vqa_service import answer_question, describe_image
 
 app = Flask(__name__)
 CORS(app)
@@ -21,6 +30,7 @@ CORS(app)
 # CONFIG & INFO
 # -----------------------------
 IMG_SIZE = (224, 224)
+XAI_OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "xai_outputs")
 
 DISEASE_INFO = {
     "foot": {"description": "Foot disease causes lameness and swelling in cattle."},
@@ -95,6 +105,34 @@ def get_progression_images(disease):
                     progression[stage] = b64
     return progression
 
+@app.route("/result-images/<path:filename>", methods=["GET"])
+def serve_result_image(filename):
+    return send_from_directory(XAI_OUTPUT_DIR, filename)
+
+@app.route("/vqa", methods=["POST"])
+def answer_vqa():
+    if "image" not in request.files:
+        return jsonify({"error": "No image uploaded"}), 400
+
+    uploaded_file = request.files["image"]
+    if uploaded_file.filename == "":
+        return jsonify({"error": "Empty file"}), 400
+
+    question = request.form.get("question", "")
+    if not question.strip():
+        return jsonify({"error": "A question is required"}), 400
+
+    try:
+        with Image.open(uploaded_file) as source_image:
+            image = source_image.convert("RGB")
+    except (UnidentifiedImageError, OSError):
+        return jsonify({"error": "Uploaded file is not a valid image"}), 400
+
+    try:
+        return jsonify(answer_question(image, question))
+    except RuntimeError as exc:
+        return jsonify({"error": str(exc)}), 503
+
 @app.route("/predict", methods=["POST"])
 def predict():
     if "image" not in request.files:
@@ -145,16 +183,75 @@ def predict():
         description = DISEASE_INFO.get(disease, {}).get("description", "")
         
         progression_images = get_progression_images(disease)
+        image_rgb = np.asarray(img)
+        request_id = uuid4().hex
 
         # EBDRE reasoning layer (after CNN+RF). Uses original RGB image.
         # Failures here must not break the existing prediction response.
-        image_rgb = np.array(img.convert("RGB"))
         ebdre_result = safe_run_ebdre_pipeline(
             image_rgb=image_rgb,
             disease=disease,
             stage=stage,
             cnn_confidence=confidence,
         )
+
+        result_images = {}
+        try:
+            biomarker_result = extract_biomarkers(
+                image_rgb,
+                debug_output_dir=os.path.join(XAI_OUTPUT_DIR, request_id),
+                save_debug=True,
+            )
+            if biomarker_result.get("debug_image_path"):
+                result_images["biomarker_image_url"] = url_for(
+                    "serve_result_image",
+                    filename=f"{request_id}/array_input_debug.jpg",
+                    _external=True,
+                )
+        except Exception as e:
+            result_images["biomarker_image_error"] = str(e)
+
+        try:
+            result_images["visual_description"] = describe_image(img)
+        except Exception as e:
+            result_images["visual_description_error"] = str(e)
+
+        xai_result = {}
+        try:
+            shap_result = explain_rf_prediction(
+                rf=rf,
+                label_encoder=le,
+                scaled_features=features,
+                predicted_class_id=int(pred[0]),
+                image_rgb=image_rgb,
+                output_path=os.path.join(XAI_OUTPUT_DIR, f"{request_id}_shap.png"),
+            )
+            shap_result.pop("visualization", None)
+            shap_result.pop("saved_path", None)
+            shap_result["image_url"] = url_for(
+                "serve_result_image",
+                filename=f"{request_id}_shap.png",
+                _external=True,
+            )
+            xai_result["random_forest_shap"] = shap_result
+        except Exception as e:
+            xai_result["random_forest_shap_error"] = str(e)
+
+        try:
+            gradcam_result = explain_saved_mobilenet(
+                image_rgb=image_rgb,
+                output_path=os.path.join(XAI_OUTPUT_DIR, f"{request_id}_gradcam.png"),
+            )
+            gradcam_result.pop("visualization", None)
+            gradcam_result.pop("saved_path", None)
+            gradcam_result["image_url"] = url_for(
+                "serve_result_image",
+                filename=f"{request_id}_gradcam.png",
+                _external=True,
+            )
+            xai_result["saved_mobilenet_gradcam"] = gradcam_result
+        except Exception as e:
+            xai_result["saved_mobilenet_gradcam_error"] = str(e)
         
         return jsonify({
             "disease": disease.capitalize(),
@@ -165,6 +262,8 @@ def predict():
             "recommendation": recommendation,
             "description": description,
             "progression_images": progression_images,
+            **result_images,
+            "xai": xai_result,
             # EBDRE fields
             "cnn_confidence": ebdre_result.get("cnn_confidence"),
             "clinical_support_score": ebdre_result.get("clinical_support_score"),
