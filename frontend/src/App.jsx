@@ -4,6 +4,7 @@ import './App.css'
 import './Dashboard.css'
 import BiomarkerDetails from './components/BiomarkerDetails'
 import ClinicalSummary from './components/ClinicalSummary'
+import DiseaseKnowledgeChat from './components/DiseaseKnowledgeChat'
 import EvidenceExplanation from './components/EvidenceExplanation'
 import RankedEvidence from './components/RankedEvidence'
 
@@ -13,10 +14,6 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState(null)
   const [error, setError] = useState(null)
-  const [vqaQuestion, setVqaQuestion] = useState('')
-  const [vqaLoading, setVqaLoading] = useState(false)
-  const [vqaResult, setVqaResult] = useState(null)
-  const [vqaError, setVqaError] = useState(null)
   const [resultImageErrors, setResultImageErrors] = useState({})
   
   const fileInputRef = useRef(null)
@@ -28,9 +25,6 @@ function App() {
       setImagePreview(URL.createObjectURL(file))
       setResult(null)
       setError(null)
-      setVqaQuestion('')
-      setVqaResult(null)
-      setVqaError(null)
       setResultImageErrors({})
     }
   }
@@ -59,33 +53,6 @@ function App() {
     }
   }
 
-  const handleAskQuestion = async (event) => {
-    event.preventDefault()
-    if (!imageFile || !vqaQuestion.trim()) return
-
-    setVqaLoading(true)
-    setVqaError(null)
-    setVqaResult(null)
-
-    const formData = new FormData()
-    formData.append('image', imageFile)
-    formData.append('question', vqaQuestion)
-
-    try {
-      const response = await axios.post('http://localhost:5000/vqa', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      })
-      setVqaResult(response.data)
-    } catch (err) {
-      console.error(err)
-      setVqaError(err.response?.data?.error || 'Failed to get an answer from the VQA service.')
-    } finally {
-      setVqaLoading(false)
-    }
-  }
-
   const handleDragOver = (e) => {
     e.preventDefault()
   }
@@ -98,9 +65,6 @@ function App() {
       setImagePreview(URL.createObjectURL(file))
       setResult(null)
       setError(null)
-      setVqaQuestion('')
-      setVqaResult(null)
-      setVqaError(null)
       setResultImageErrors({})
     }
   }
@@ -126,7 +90,8 @@ function App() {
           <a href="#prediction">Assessment</a>
           <a href="#clinical-support">Clinical support</a>
           <a href="#visual-evidence">Image evidence</a>
-          <a href="#vqa">Ask about image</a>
+          <a href="#knowledge">Disease knowledge</a>
+          <a href="#knowledge">Ask the assistant</a>
         </nav>
         <div className="workspace-status"><span /> Image review workspace</div>
       </header>
@@ -363,46 +328,7 @@ function App() {
           </section>
         )}
 
-        {imageFile && (
-          <section id="vqa" className="vqa-section ebdre-card" aria-labelledby="vqa-title">
-            <div className="vqa-heading">
-              <div className="vqa-symbol" aria-hidden="true">Q</div>
-              <div>
-                <p className="section-kicker">IMAGE-BASED ASSISTANT</p>
-                <h2 id="vqa-title">Ask about this image</h2>
-                <p className="ebdre-subtitle">BLIP answers your question from the uploaded image. This assistant does not diagnose disease.</p>
-              </div>
-            </div>
-            <form className="vqa-form" onSubmit={handleAskQuestion}>
-              <label htmlFor="vqa-question">Your question</label>
-              <div className="vqa-controls">
-                <input
-                  id="vqa-question"
-                  type="text"
-                  value={vqaQuestion}
-                  onChange={(event) => setVqaQuestion(event.target.value)}
-                  placeholder="Ask anything about visible details..."
-                  disabled={vqaLoading}
-                />
-                <button
-                  type="submit"
-                  className="vqa-ask-button"
-                  disabled={!vqaQuestion.trim() || vqaLoading}
-                >
-                  {vqaLoading ? <><span className="spinner" /> Thinking</> : 'Ask image'}
-                </button>
-              </div>
-            </form>
-            {vqaError && <div className="error-message" role="alert">{vqaError}</div>}
-            {vqaLoading && <p className="vqa-loading" role="status">BLIP is considering the image and your question...</p>}
-            {vqaResult && (
-              <div className="vqa-answer" aria-live="polite">
-                <p className="vqa-question-echo">{vqaResult.question}</p>
-                <p className="vqa-answer-text">{vqaResult.answer}</p>
-              </div>
-            )}
-          </section>
-        )}
+        <DiseaseKnowledgeChat reviewImage={imageFile} predictionContext={result} />
       </main>
     </div>
   )

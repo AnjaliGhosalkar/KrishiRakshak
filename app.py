@@ -1,6 +1,7 @@
 import os
 import random
 import base64
+import json
 from uuid import uuid4
 from io import BytesIO
 import numpy as np
@@ -21,15 +22,21 @@ from biomarker_extraction import extract_biomarkers
 from ebdre.engine import safe_run_ebdre_pipeline
 from mobilenet_gradcam import explain_saved_mobilenet
 from rf_shap_explainer import explain_rf_prediction
-from vqa_service import answer_question, describe_image
+from vqa_service import analyze_image, answer_question, describe_image
+from disease_knowledge import DiseaseKnowledgeBase, KnowledgeServiceError
 
 app = Flask(__name__)
 CORS(app)
+knowledge_base = DiseaseKnowledgeBase()
 
 # -----------------------------
 # CONFIG & INFO
 # -----------------------------
 IMG_SIZE = (224, 224)
+ASSISTANT_IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".bmp"}
+ASSISTANT_IMAGE_FORMATS = {"JPEG", "PNG", "WEBP", "BMP"}
+ASSISTANT_IMAGE_MAX_BYTES = 12 * 1024 * 1024
+ASSISTANT_IMAGE_MAX_PIXELS = 20_000_000
 XAI_OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "xai_outputs")
 
 DISEASE_INFO = {
@@ -87,6 +94,36 @@ def encode_image_base64(img_path):
     except Exception as e:
         return None
 
+
+def read_assistant_image(uploaded_file):
+    """Decode a bounded, supported image upload for assistant analysis."""
+    filename = (uploaded_file.filename or "").strip()
+    if not filename:
+        raise ValueError("Choose an image file before submitting.")
+    if os.path.splitext(filename)[1].lower() not in ASSISTANT_IMAGE_EXTENSIONS:
+        raise ValueError("Upload a JPEG, PNG, WEBP, or BMP image.")
+
+    payload = uploaded_file.stream.read(ASSISTANT_IMAGE_MAX_BYTES + 1)
+    if not payload:
+        raise ValueError("The uploaded image is empty.")
+    if len(payload) > ASSISTANT_IMAGE_MAX_BYTES:
+        raise ValueError("The image must be 12 MB or smaller.")
+
+    try:
+        with Image.open(BytesIO(payload)) as image_check:
+            if image_check.format not in ASSISTANT_IMAGE_FORMATS:
+                raise ValueError("The uploaded file is not a supported image format.")
+            if image_check.width * image_check.height > ASSISTANT_IMAGE_MAX_PIXELS:
+                raise ValueError("The image dimensions are too large to analyze.")
+            image_check.verify()
+        with Image.open(BytesIO(payload)) as source_image:
+            source_image.load()
+            return source_image.convert("RGB")
+    except ValueError:
+        raise
+    except (UnidentifiedImageError, OSError, Image.DecompressionBombError) as exc:
+        raise ValueError("The uploaded file is not a valid, decodable image.") from exc
+
 def get_progression_images(disease):
     if disease == "healthy" or disease.lower() == "healthy":
         return {}
@@ -123,15 +160,80 @@ def answer_vqa():
         return jsonify({"error": "A question is required"}), 400
 
     try:
-        with Image.open(uploaded_file) as source_image:
-            image = source_image.convert("RGB")
-    except (UnidentifiedImageError, OSError):
-        return jsonify({"error": "Uploaded file is not a valid image"}), 400
+        image = read_assistant_image(uploaded_file)
+    except ValueError as exc:
+        return jsonify({"error": str(exc)}), 400
 
     try:
         return jsonify(answer_question(image, question))
     except RuntimeError as exc:
         return jsonify({"error": str(exc)}), 503
+
+@app.route("/knowledge/status", methods=["GET"])
+def knowledge_status():
+    return jsonify(knowledge_base.status())
+
+@app.route("/knowledge/reindex", methods=["POST"])
+def knowledge_reindex():
+    try:
+        report = knowledge_base.reindex()
+    except KnowledgeServiceError as exc:
+        return jsonify({"error": str(exc)}), 503
+    return jsonify(report), 200 if report.get("built") else 422
+
+@app.route("/knowledge/ask", methods=["POST"])
+def ask_disease_knowledge():
+    try:
+        image = None
+        prediction_context = None
+        if request.mimetype == "multipart/form-data":
+            question = request.form.get("question", "")
+            history = json.loads(request.form.get("history", "[]"))
+            top_k = int(request.form.get("top_k", "4"))
+            prediction_value = request.form.get("prediction_context")
+            if prediction_value:
+                prediction_context = json.loads(prediction_value)
+            uploaded_file = request.files.get("image")
+            if uploaded_file is not None:
+                image = read_assistant_image(uploaded_file)
+        else:
+            body = request.get_json(silent=True)
+            if not isinstance(body, dict):
+                return jsonify({"error": "A JSON request body is required"}), 400
+            question = body.get("question")
+            history = body.get("history", [])
+            top_k = body.get("top_k", 4)
+            prediction_context = body.get("prediction_context")
+
+        if not isinstance(question, str) or not question.strip():
+            return jsonify({"error": "A non-empty question is required"}), 400
+        if len(question) > 1000:
+            return jsonify({"error": "The question must be 1000 characters or fewer"}), 400
+        if isinstance(top_k, bool) or not isinstance(top_k, int) or not 1 <= top_k <= 8:
+            return jsonify({"error": "top_k must be an integer between 1 and 8"}), 400
+
+        image_analysis = analyze_image(image, question) if image is not None else None
+        result = knowledge_base.ask(
+            question,
+            top_k=top_k,
+            history=history,
+            image_observations=(image_analysis or {}).get("image_observations"),
+            prediction_context=prediction_context,
+            image_provided=image is not None,
+        )
+        if image_analysis:
+            result["image_analysis_status"] = image_analysis["status"]
+            if image_analysis.get("image_observations"):
+                result["image_observations"] = image_analysis["image_observations"]
+        if prediction_context:
+            result["prediction_context"] = prediction_context
+        return jsonify(result)
+    except ValueError as exc:
+        return jsonify({"error": str(exc)}), 400
+    except KnowledgeServiceError as exc:
+        return jsonify({"error": str(exc)}), 503
+    except RuntimeError as exc:
+        return jsonify({"error": f"Image analysis is unavailable: {exc}"}), 503
 
 @app.route("/predict", methods=["POST"])
 def predict():
